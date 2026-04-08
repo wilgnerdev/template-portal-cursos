@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhes do Curso - Fundação O Pão dos Pobres">
+    <title>Detalhes do Curso - Pão dos Pobres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="curso-detalhes.css">
+</head>
+<body>
+    <!-- ========================================
+         HEADER FIXO - Barra de navegação
+    ========================================= -->
+    <header class="header-fixed">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Pão dos Pobres</h1>
+                        <p class="logo-subtitle">Portal de Cursos</p>
+                    </a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================
+         BREADCRUMB - Navegação em trilha
+    ========================================= -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> / 
+            <a href="index.html#cursos">Cursos</a> / 
+            <span id="breadcrumb-curso">Detalhes</span>
+        </div>
+    </section>
+
+    <!-- ========================================
+         HERO DO CURSO - Banner específico
+    ========================================= -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="course-hero-content">
+                <div class="course-hero-icon" id="hero-icon">💼</div>
+                <h1 class="course-hero-title" id="hero-title">Nome do Curso</h1>
+                <p class="course-hero-subtitle" id="hero-subtitle">Desenvolva suas habilidades profissionais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DO CURSO
+    ========================================= -->
+    <main class="course-details-main">
+        <div class="container">
+            <div class="course-layout">
+                <!-- Coluna principal com informações -->
+                <div class="course-content">
+                    <!-- Sobre o Curso -->
+                    <section class="course-section">
+                        <h2 class="section-title">
+                            <span class="section-icon">📋</span>
+                            Sobre o Curso
+                        </h2>
+                        <p class="course-text" id="course-about">
+                            Descrição completa do curso será carregada aqui.
+                        </p>
+                    </section>
+
+                    <!-- Objetivo -->
+                    <section class="course-section">
+                        <h2 class="section-title">
+                            <span class="section-icon">🎯</span>
+                            Objetivo
+                        </h2>
+                        <p class="course-text" id="course-objective">
+                            Objetivo do curso será carregado aqui.
+                        </p>
+                    </section>
+
+                    <!-- O que você vai aprender -->
+                    <section class="course-section">
+                        <h2 class="section-title">
+                            <span class="section-icon">📚</span>
+                            O que você vai aprender
+                        </h2>
+                        <ul class="learning-list" id="learning-list">
+                            <!-- Conteúdo será carregado dinamicamente via JavaScript -->
+                        </ul>
+                    </section>
+
+                    <!-- Diferenciais -->
+                    <section class="course-section">
+                        <h2 class="section-title">
+                            <span class="section-icon">⭐</span>
+                            Diferenciais
+                        </h2>
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">👨‍🏫</div>
+                                <h3>Equipe Qualificada</h3>
+                                <p>Professores experientes e especializados</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">🏢</div>
+                                <h3>Estrutura Completa</h3>
+                                <p>Laboratórios e equipamentos modernos</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">💼</div>
+                                <h3>Mercado de Trabalho</h3>
+                                <p>Preparação para inserção profissional</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">📜</div>
+                                <h3>Certificação</h3>
+                                <p>Certificado reconhecido no mercado</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar com informações rápidas -->
+                <aside class="course-sidebar">
+                    <!-- Card de informações -->
+                    <div class="info-box">
+                        <h3 class="info-box-title">Informações do Curso</h3>
+                        
+                        <div class="info-item">
+                            <span class="info-label">⏱️ Carga Horária:</span>
+                            <span class="info-value" id="course-duration">A definir</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-label">📅 Modalidade:</span>
+                            <span class="info-value">Presencial</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-label">🎓 Certificação:</span>
+                            <span class="info-value">Sim</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-label">👥 Idade:</span>
+                            <span class="info-value">14 a 24 anos*</span>
+                        </div>
+
+                        <p class="info-note">*Sem limite de idade para pessoas com deficiência</p>
+                        
+                        <a href="contato.html" class="btn btn-primary btn-full">
+                            Inscreva-se Agora
+                        </a>
+                    </div>
+
+                    <!-- Card de requisitos -->
+                    <div class="info-box">
+                        <h3 class="info-box-title">Requisitos</h3>
+                        <ul class="requirements-list">
+                            <li>✓ Idade entre 14 e 24 anos (ou pessoa com deficiência)</li>
+                            <li>✓ Família em situação de vulnerabilidade social</li>
+                            <li>✓ Disponibilidade para aulas presenciais</li>
+                            <li>✓ Comprometimento com o aprendizado</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card de contato -->
+                    <div class="info-box contact-box">
+                        <h3 class="info-box-title">Dúvidas?</h3>
+                        <p>Entre em contato conosco:</p>
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <a href="tel:+555134336900">(51) 3433-6900</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>✉️</span>
+                            <a href="mailto:relacaoinstitucional@paodospobres.com.br">relacaoinstitucional@paodospobres.com.br</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========================================
+         CURSOS RELACIONADOS
+    ========================================= -->
+    <section class="related-courses">
+        <div class="container">
+            <h2 class="section-header-title">Outros Cursos que Podem Interessar</h2>
+            <div class="courses-grid-small">
+                <!-- Cards serão gerados dinamicamente via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER - Rodapé
+    ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Fundação O Pão dos Pobres</h3>
+                    <p>Transformando vidas através da educação e do trabalho desde 1895.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#cursos">Cursos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Rua da República, 801 - Cidade Baixa</li>
+                        <li>📞 (51) 3433-6900 / 3433-6902</li>
+                        <li>✉️ relacaoinstitucional@paodospobres.com.br</li>
+                        <li>🕐 Seg-Sex: 8h às 12h e 13h às 17h20</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fundação O Pão dos Pobres - Todos os direitos reservados.</p>
+                <p class="footer-dev">Desenvolvido por Wilgner Guimarães - TCC 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="curso-detalhes.js"></script>
+</body>
+</html>

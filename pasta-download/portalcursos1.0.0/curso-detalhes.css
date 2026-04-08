@@ -1,0 +1,395 @@
+/* ========================================
+   CSS ESPECÍFICO PARA PÁGINA DE DETALHES DO CURSO
+   Complementa o styles.css principal
+======================================== */
+
+/* ========================================
+   BREADCRUMB - Navegação em trilha
+======================================== */
+.breadcrumb {
+    background-color: var(--cor-cinza-claro);
+    padding: var(--espacamento-sm) 0;
+    margin-top: 80px; /* Altura do header fixo */
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--cor-azul-principal);
+    text-decoration: none;
+    transition: var(--transicao-rapida);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--cor-cinza-texto);
+}
+
+/* ========================================
+   HERO DO CURSO
+======================================== */
+.course-hero {
+    background: linear-gradient(135deg, var(--cor-azul-principal), var(--cor-azul-escuro));
+    color: var(--cor-branco);
+    padding: var(--espacamento-xl) var(--espacamento-sm);
+    text-align: center;
+}
+
+.course-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-hero-icon {
+    font-size: 4rem;
+    margin-bottom: var(--espacamento-sm);
+}
+
+.course-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--espacamento-sm);
+}
+
+.course-hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+======================================== */
+.course-details-main {
+    padding: var(--espacamento-xl) var(--espacamento-sm);
+}
+
+.course-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-xl);
+}
+
+/* Desktop: Layout com sidebar */
+@media (min-width: 992px) {
+    .course-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+.course-content {
+    order: 2;
+}
+
+@media (min-width: 992px) {
+    .course-content {
+        order: 1;
+    }
+}
+
+.course-section {
+    background-color: var(--cor-branco);
+    padding: var(--espacamento-lg);
+    border-radius: 12px;
+    box-shadow: var(--sombra-leve);
+    margin-bottom: var(--espacamento-lg);
+}
+
+.section-title {
+    color: var(--cor-azul-principal);
+    font-size: 1.8rem;
+    margin-bottom: var(--espacamento-md);
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-sm);
+}
+
+.section-icon {
+    font-size: 2rem;
+}
+
+.course-text {
+    color: var(--cor-cinza-texto);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   LISTA DE APRENDIZADO
+======================================== */
+.learning-list {
+    list-style: none;
+    display: grid;
+    gap: var(--espacamento-sm);
+}
+
+.learning-list li {
+    background-color: var(--cor-cinza-claro);
+    padding: var(--espacamento-sm) var(--espacamento-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-laranja-principal);
+    transition: var(--transicao-rapida);
+}
+
+.learning-list li:hover {
+    background-color: var(--cor-cinza-medio);
+    transform: translateX(5px);
+}
+
+.learning-list li::before {
+    content: '✓ ';
+    color: var(--cor-laranja-principal);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+/* ========================================
+   GRID DE BENEFÍCIOS
+======================================== */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espacamento-md);
+    margin-top: var(--espacamento-md);
+}
+
+.benefit-card {
+    background-color: var(--cor-cinza-claro);
+    padding: var(--espacamento-md);
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transicao-rapida);
+}
+
+.benefit-card:hover {
+    background-color: var(--cor-azul-principal);
+    color: var(--cor-branco);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--espacamento-xs);
+}
+
+.benefit-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--espacamento-xs);
+    color: var(--cor-azul-principal);
+}
+
+.benefit-card:hover h3 {
+    color: var(--cor-branco);
+}
+
+.benefit-card p {
+    font-size: 0.9rem;
+    color: var(--cor-cinza-texto);
+}
+
+.benefit-card:hover p {
+    color: var(--cor-branco);
+    opacity: 0.9;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+.course-sidebar {
+    order: 1;
+}
+
+@media (min-width: 992px) {
+    .course-sidebar {
+        order: 2;
+        position: sticky;
+        top: 100px; /* Altura do header + margem */
+        height: fit-content;
+    }
+}
+
+.info-box {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: var(--espacamento-lg);
+    box-shadow: var(--sombra-leve);
+    margin-bottom: var(--espacamento-lg);
+}
+
+.info-box-title {
+    color: var(--cor-azul-principal);
+    font-size: 1.3rem;
+    margin-bottom: var(--espacamento-md);
+    padding-bottom: var(--espacamento-sm);
+    border-bottom: 2px solid var(--cor-laranja-principal);
+}
+
+/* ========================================
+   INFORMAÇÕES DO CURSO
+======================================== */
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--espacamento-sm) 0;
+    border-bottom: 1px solid var(--cor-cinza-medio);
+}
+
+.info-item:last-of-type {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--cor-preto);
+    flex: 0 0 auto;
+    margin-right: var(--espacamento-sm);
+}
+
+.info-value {
+    color: var(--cor-cinza-texto);
+    text-align: right;
+    flex: 1;
+}
+
+.info-note {
+    font-size: 0.85rem;
+    color: var(--cor-cinza-texto);
+    font-style: italic;
+    margin-top: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-md);
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/* ========================================
+   REQUISITOS
+======================================== */
+.requirements-list {
+    list-style: none;
+    margin-top: var(--espacamento-sm);
+}
+
+.requirements-list li {
+    padding: var(--espacamento-xs) 0;
+    color: var(--cor-cinza-texto);
+    line-height: 1.6;
+}
+
+/* ========================================
+   CONTATO
+======================================== */
+.contact-box {
+    background: linear-gradient(135deg, var(--cor-laranja-principal), var(--cor-laranja-hover));
+    color: var(--cor-branco);
+}
+
+.contact-box .info-box-title {
+    color: var(--cor-branco);
+    border-bottom-color: var(--cor-branco);
+}
+
+.contact-box p {
+    margin-bottom: var(--espacamento-md);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-sm);
+}
+
+.contact-item span {
+    font-size: 1.3rem;
+}
+
+.contact-item a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transicao-rapida);
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* ========================================
+   CURSOS RELACIONADOS
+======================================== */
+.related-courses {
+    background-color: var(--cor-cinza-claro);
+    padding: var(--espacamento-xl) var(--espacamento-sm);
+}
+
+.section-header-title {
+    text-align: center;
+    color: var(--cor-azul-principal);
+    font-size: 2rem;
+    margin-bottom: var(--espacamento-lg);
+}
+
+.courses-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espacamento-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.courses-grid-small .course-card {
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+@media (max-width: 768px) {
+    .course-hero-title {
+        font-size: 2rem;
+    }
+
+    .course-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .info-value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-hero-icon {
+        font-size: 3rem;
+    }
+
+    .course-hero-title {
+        font-size: 1.7rem;
+    }
+
+    .section-header-title {
+        font-size: 1.5rem;
+    }
+}

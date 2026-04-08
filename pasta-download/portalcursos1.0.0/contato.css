@@ -1,0 +1,406 @@
+/* ========================================
+   CSS ESPECÍFICO PARA PÁGINA DE CONTATO
+======================================== */
+
+/* ========================================
+   HERO CONTATO
+======================================== */
+.contact-hero {
+    background: linear-gradient(135deg, var(--cor-azul-principal), var(--cor-azul-escuro));
+    color: var(--cor-branco);
+    text-align: center;
+    padding: var(--espacamento-xl) var(--espacamento-sm);
+    margin-top: 80px;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--espacamento-sm);
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+======================================== */
+.contact-main {
+    padding: var(--espacamento-xl) var(--espacamento-sm);
+    background-color: var(--cor-cinza-claro);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-xl);
+}
+
+@media (min-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* ========================================
+   SEÇÃO DO FORMULÁRIO
+======================================== */
+.form-section {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: var(--espacamento-xl);
+    box-shadow: var(--sombra-media);
+}
+
+.form-header {
+    margin-bottom: var(--espacamento-lg);
+    text-align: center;
+}
+
+.form-header h2 {
+    color: var(--cor-azul-principal);
+    font-size: 2rem;
+    margin-bottom: var(--espacamento-sm);
+}
+
+.form-header p {
+    color: var(--cor-cinza-texto);
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-lg);
+}
+
+/* Grupos de campos (fieldsets) */
+.form-group {
+    border: 2px solid var(--cor-cinza-medio);
+    border-radius: 10px;
+    padding: var(--espacamento-lg);
+}
+
+.form-group legend {
+    color: var(--cor-azul-principal);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 var(--espacamento-sm);
+}
+
+/* Linhas do formulário */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-md);
+    margin-bottom: var(--espacamento-md);
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Campo que ocupa toda a linha */
+    .form-field:only-child {
+        grid-column: 1 / -1;
+    }
+    
+    /* Campo maior */
+    .form-field-large {
+        grid-column: 2 / -1;
+    }
+    
+    /* Campo menor */
+    .form-field-small {
+        grid-column: span 1;
+        max-width: 150px;
+    }
+}
+
+/* Campos individuais */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    color: var(--cor-preto);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="date"],
+.form-field select,
+.form-field textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--cor-cinza-medio);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transicao-rapida);
+    background-color: var(--cor-branco);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--cor-azul-principal);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox e Radio personalizados */
+.form-field input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-field label:has(input[type="checkbox"]) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--espacamento-xs);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Termos de uso */
+.form-terms {
+    background-color: var(--cor-cinza-claro);
+    padding: var(--espacamento-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-azul-principal);
+}
+
+.form-terms label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacamento-sm);
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+.form-terms input[type="checkbox"] {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Ações do formulário */
+.form-actions {
+    text-align: center;
+    margin-top: var(--espacamento-md);
+}
+
+.form-actions .btn {
+    min-width: 250px;
+}
+
+.form-note {
+    text-align: center;
+    color: var(--cor-cinza-texto);
+    font-size: 0.9rem;
+    margin-top: var(--espacamento-sm);
+}
+
+/* ========================================
+   MENSAGEM DE SUCESSO
+======================================== */
+.success-message {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: var(--cor-branco);
+    padding: var(--espacamento-xl);
+    border-radius: 12px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: var(--espacamento-md);
+    animation: checkmark 0.8s ease;
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.success-message h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--espacamento-sm);
+}
+
+.success-message p {
+    font-size: 1.1rem;
+    margin-bottom: var(--espacamento-lg);
+    opacity: 0.95;
+}
+
+.success-message .btn {
+    background-color: var(--cor-branco);
+    color: #10b981;
+}
+
+/* ========================================
+   SIDEBAR DE INFORMAÇÕES
+======================================== */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-md);
+}
+
+.info-card {
+    background-color: var(--cor-branco);
+    padding: var(--espacamento-lg);
+    border-radius: 12px;
+    box-shadow: var(--sombra-leve);
+    transition: var(--transicao-rapida);
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.info-card h3 {
+    color: var(--cor-azul-principal);
+    font-size: 1.2rem;
+    margin-bottom: var(--espacamento-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-xs);
+}
+
+.info-card p {
+    color: var(--cor-cinza-texto);
+    line-height: 1.7;
+    margin: 0.3rem 0;
+}
+
+.info-card a {
+    color: var(--cor-azul-principal);
+    text-decoration: none;
+    transition: var(--transicao-rapida);
+    word-break: break-word;
+}
+
+.info-card a:hover {
+    color: var(--cor-laranja-principal);
+    text-decoration: underline;
+}
+
+.info-card.highlight {
+    background: linear-gradient(135deg, var(--cor-laranja-principal), var(--cor-laranja-hover));
+    color: var(--cor-branco);
+}
+
+.info-card.highlight h3 {
+    color: var(--cor-branco);
+}
+
+.info-card.highlight p {
+    color: var(--cor-branco);
+    opacity: 0.95;
+}
+
+.info-card.highlight a {
+    color: var(--cor-branco);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ========================================
+   VALIDAÇÃO DE FORMULÁRIO
+======================================== */
+.form-field input:invalid:not(:focus):not(:placeholder-shown),
+.form-field select:invalid:not(:focus),
+.form-field textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc2626;
+}
+
+.form-field input:valid:not(:focus):not(:placeholder-shown),
+.form-field select:valid:not(:focus),
+.form-field textarea:valid:not(:focus):not(:placeholder-shown) {
+    border-color: #10b981;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .form-section {
+        padding: var(--espacamento-md);
+    }
+
+    .form-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .form-group {
+        padding: var(--espacamento-md);
+    }
+
+    .form-actions .btn {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group legend {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de Cursos da Fundação O Pão dos Pobres - Transformando o Amanhã através da Educação e do Trabalho">
+    <title>Portal de Cursos - Pão dos Pobres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========================================
+         HEADER FIXO - Barra de navegação principal
+         Contém logo e menu de navegação
+    ========================================= -->
+    <header class="header-fixed">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo da instituição -->
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Pão dos Pobres</h1>
+                        <p class="logo-subtitle">Portal de Cursos</p>
+                    </a>
+                </div>
+
+                <!-- Menu hamburguer para mobile -->
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Menu de navegação -->
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================
+         SEÇÃO HERO - Primeira impressão da página
+         Apresenta a missão e o propósito do portal
+    ========================================= -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Transformando o Amanhã através da Educação e do Trabalho</h2>
+                <p class="hero-description">
+                    A Aprendizagem Profissional do Pão dos Pobres oferece cursos de qualificação 
+                    com equipe técnica multidisciplinar e estrutura adequada para a formação de 
+                    adolescentes e jovens.
+                </p>
+                <a href="#cursos" class="btn btn-primary">Conheça Nossos Cursos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE INFORMAÇÕES
+         Destaca objetivo e público-alvo
+    ========================================= -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <h3>Objetivo</h3>
+                    <p>Proporcionar a formação integral de adolescentes e jovens, visando sua inserção no mundo do trabalho, como cidadãos éticos e profissionais competentes.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">👥</div>
+                    <h3>Público-Alvo</h3>
+                    <p>Adolescentes e jovens entre 14 e 24 anos (sem limite de idade para pessoas com deficiência), de famílias em situação de vulnerabilidade ou risco social.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE CURSOS - Grid de cards
+         Exibe todos os cursos disponíveis em formato de cards
+    ========================================= -->
+    <section id="cursos" class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Cursos</h2>
+                <p>Cursos de aprendizagem profissional e qualificação para o mercado de trabalho</p>
+            </div>
+
+            <!-- Grid responsivo de cards de cursos -->
+            <div class="courses-grid">
+                <!-- Card 1 -->
+                <div class="course-card">
+                    <div class="course-icon">🧹</div>
+                    <h3 class="course-title">Asseio e Conservação</h3>
+                    <p class="course-description">
+                        Desenvolva habilidades essenciais para atuar na área de limpeza e conservação 
+                        de ambientes corporativos e residenciais.
+                    </p>
+                    <a href="curso-detalhes.html?curso=asseio" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="course-card">
+                    <div class="course-icon">💼</div>
+                    <h3 class="course-title">Assistente Administrativo</h3>
+                    <p class="course-description">
+                        Capacite-se para atuar em rotinas administrativas, organizando documentos, 
+                        atendendo clientes e gerenciando processos.
+                    </p>
+                    <a href="curso-detalhes.html?curso=administrativo" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="course-card">
+                    <div class="course-icon">✂️</div>
+                    <h3 class="course-title">Assistente de Cabeleireiro</h3>
+                    <p class="course-description">
+                        Aprenda técnicas de corte, coloração e tratamento capilar para iniciar sua 
+                        carreira no setor de beleza.
+                    </p>
+                    <a href="curso-detalhes.html?curso=cabeleireiro" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="course-card">
+                    <div class="course-icon">🧵</div>
+                    <h3 class="course-title">Corte, Costura e Modelagem Sustentável</h3>
+                    <p class="course-description">
+                        Domine técnicas de costura e modelagem com foco em práticas sustentáveis 
+                        e responsabilidade ambiental.
+                    </p>
+                    <a href="curso-detalhes.html?curso=costura" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="course-card">
+                    <div class="course-icon">❄️</div>
+                    <h3 class="course-title">Climatização e Refrigeração</h3>
+                    <p class="course-description">
+                        Aprenda a instalar, manter e reparar sistemas de ar condicionado e 
+                        refrigeração comercial e residencial.
+                    </p>
+                    <a href="curso-detalhes.html?curso=climatizacao" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="course-card">
+                    <div class="course-icon">⚽</div>
+                    <h3 class="course-title">Desporto</h3>
+                    <p class="course-description">
+                        Desenvolva-se profissionalmente na área esportiva, aprendendo sobre educação 
+                        física, recreação e gestão esportiva.
+                    </p>
+                    <a href="curso-detalhes.html?curso=desporto" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="course-card">
+                    <div class="course-icon">🛗</div>
+                    <h3 class="course-title">Eletromecânica de Elevadores</h3>
+                    <p class="course-description">
+                        Qualifique-se para realizar manutenção preventiva e corretiva em sistemas 
+                        de elevadores e escadas rolantes.
+                    </p>
+                    <a href="curso-detalhes.html?curso=elevadores" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="course-card">
+                    <div class="course-icon">🍳</div>
+                    <h3 class="course-title">Gastronomia</h3>
+                    <p class="course-description">
+                        Explore o mundo culinário aprendendo técnicas profissionais de preparação, 
+                        apresentação e gestão gastronômica.
+                    </p>
+                    <a href="curso-detalhes.html?curso=gastronomia" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="course-card">
+                    <div class="course-icon">🌱</div>
+                    <h3 class="course-title">Gestão Ambiental</h3>
+                    <p class="course-description">
+                        Capacite-se em práticas sustentáveis, gestão de resíduos e preservação 
+                        do meio ambiente para empresas e comunidades.
+                    </p>
+                    <a href="curso-detalhes.html?curso=ambiental" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3 class="course-title">Manutenção de Computadores</h3>
+                    <p class="course-description">
+                        Aprenda a diagnosticar problemas, realizar manutenção preventiva e 
+                        reparar equipamentos de informática.
+                    </p>
+                    <a href="curso-detalhes.html?curso=computadores" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="course-card">
+                    <div class="course-icon">🔧</div>
+                    <h3 class="course-title">Mecânica Automotiva</h3>
+                    <p class="course-description">
+                        Desenvolva competências em manutenção e reparo de veículos, incluindo 
+                        motores, sistemas elétricos e suspensão.
+                    </p>
+                    <a href="curso-detalhes.html?curso=mecanica" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="course-card">
+                    <div class="course-icon">🎸</div>
+                    <h3 class="course-title">Músico Intérprete Instrumentista</h3>
+                    <p class="course-description">
+                        Aprimore suas habilidades musicais e desenvolva técnicas para atuar 
+                        profissionalmente como instrumentista.
+                    </p>
+                    <a href="curso-detalhes.html?curso=musica" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="course-card">
+                    <div class="course-icon">🪑</div>
+                    <h3 class="course-title">Projetista de Móveis</h3>
+                    <p class="course-description">
+                        Aprenda a criar projetos de móveis planejados, desde o design até a 
+                        execução, com foco em funcionalidade e estética.
+                    </p>
+                    <a href="curso-detalhes.html?curso=moveis" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="course-card">
+                    <div class="course-icon">🛍️</div>
+                    <h3 class="course-title">Vendas e Atendimento</h3>
+                    <p class="course-description">
+                        Desenvolva habilidades de comunicação, negociação e atendimento ao cliente 
+                        para atuar no varejo e serviços.
+                    </p>
+                    <a href="curso-detalhes.html?curso=vendas" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+
+                <!-- Card 15 - Curso de Qualificação -->
+                <div class="course-card featured">
+                    <div class="course-badge">Qualificação</div>
+                    <div class="course-icon">👨‍🍳</div>
+                    <h3 class="course-title">Auxiliar de Cozinha</h3>
+                    <p class="course-description">
+                        Curso de qualificação profissional para atuar como auxiliar em cozinhas 
+                        industriais, restaurantes e hotéis.
+                    </p>
+                    <a href="curso-detalhes.html?curso=auxiliar-cozinha" class="btn btn-secondary">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CALL TO ACTION - Incentivo à inscrição
+    ========================================= -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Transformar seu Futuro?</h2>
+                <p>Inscreva-se agora e dê o primeiro passo para uma carreira de sucesso!</p>
+                <a href="contato.html" class="btn btn-primary btn-large">Fazer Inscrição</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER - Rodapé com informações de contato
+    ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Sobre -->
+                <div class="footer-column">
+                    <h3>Fundação O Pão dos Pobres</h3>
+                    <p>Transformando vidas através da educação e do trabalho desde 1895.</p>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato -->
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Rua da República, 801 - Cidade Baixa</li>
+                        <li>📞 (51) 3433-6900 / 3433-6902</li>
+                        <li>✉️ relacaoinstitucional@paodospobres.com.br</li>
+                        <li>🕐 Seg-Sex: 8h às 12h e 13h às 17h20</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fundação O Pão dos Pobres - Todos os direitos reservados.</p>
+                <p class="footer-dev">Desenvolvido por Wilgner Guimarães - TCC 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para menu mobile -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato e inscreva-se nos cursos da Fundação O Pão dos Pobres">
+    <title>Contato e Inscrição - Pão dos Pobres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <!-- ========================================
+         HEADER FIXO
+    ========================================= -->
+    <header class="header-fixed">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Pão dos Pobres</h1>
+                        <p class="logo-subtitle">Portal de Cursos</p>
+                    </a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+                    <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HERO CONTATO
+    ========================================= -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para ajudá-lo a começar sua jornada profissional</p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Formulário de Inscrição -->
+                <div class="form-section">
+                    <div class="form-header">
+                        <h2>Formulário de Inscrição</h2>
+                        <p>Preencha os campos abaixo para se inscrever em nossos cursos</p>
+                    </div>
+
+                    <form id="inscricaoForm" class="contact-form">
+                        <!-- Dados Pessoais -->
+                        <fieldset class="form-group">
+                            <legend>Dados Pessoais</legend>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="nome">Nome Completo *</label>
+                                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="cpf">CPF *</label>
+                                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="dataNascimento">Data de Nascimento *</label>
+                                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="telefone">Telefone *</label>
+                                    <input type="tel" id="telefone" name="telefone" required placeholder="(51) 99999-9999">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Endereço -->
+                        <fieldset class="form-group">
+                            <legend>Endereço</legend>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="cep">CEP *</label>
+                                    <input type="text" id="cep" name="cep" required placeholder="00000-000">
+                                </div>
+
+                                <div class="form-field form-field-large">
+                                    <label for="endereco">Endereço *</label>
+                                    <input type="text" id="endereco" name="endereco" required placeholder="Rua, Avenida...">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field form-field-small">
+                                    <label for="numero">Número *</label>
+                                    <input type="text" id="numero" name="numero" required placeholder="123">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco...">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="bairro">Bairro *</label>
+                                    <input type="text" id="bairro" name="bairro" required placeholder="Nome do bairro">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="cidade">Cidade *</label>
+                                    <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="estado">Estado *</label>
+                                    <select id="estado" name="estado" required>
+                                        <option value="">Selecione</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="PR">Paraná</option>
+                                        <!-- Adicione outros estados conforme necessário -->
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Informações do Curso -->
+                        <fieldset class="form-group">
+                            <legend>Curso de Interesse</legend>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="curso">Selecione o Curso *</label>
+                                    <select id="curso" name="curso" required>
+                                        <option value="">Escolha um curso</option>
+                                        <option value="asseio">Asseio e Conservação</option>
+                                        <option value="administrativo">Assistente Administrativo</option>
+                                        <option value="cabeleireiro">Assistente de Cabeleireiro</option>
+                                        <option value="costura">Corte, Costura e Modelagem Sustentável</option>
+                                        <option value="climatizacao">Climatização e Refrigeração</option>
+                                        <option value="desporto">Desporto</option>
+                                        <option value="elevadores">Eletromecânica de Elevadores</option>
+                                        <option value="gastronomia">Gastronomia</option>
+                                        <option value="ambiental">Gestão Ambiental</option>
+                                        <option value="computadores">Manutenção de Computadores</option>
+                                        <option value="mecanica">Mecânica Automotiva</option>
+                                        <option value="musica">Músico Intérprete Instrumentista</option>
+                                        <option value="moveis">Projetista de Móveis</option>
+                                        <option value="vendas">Vendas e Atendimento</option>
+                                        <option value="auxiliar-cozinha">Auxiliar de Cozinha</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="periodo">Período de Preferência</label>
+                                    <select id="periodo" name="periodo">
+                                        <option value="">Selecione</option>
+                                        <option value="manha">Manhã</option>
+                                        <option value="tarde">Tarde</option>
+                                        <option value="noite">Noite</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Informações Adicionais -->
+                        <fieldset class="form-group">
+                            <legend>Informações Adicionais</legend>
+
+                            <div class="form-field">
+                                <label for="escolaridade">Escolaridade *</label>
+                                <select id="escolaridade" name="escolaridade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+                                    <option value="fundamental-completo">Ensino Fundamental Completo</option>
+                                    <option value="medio-incompleto">Ensino Médio Incompleto</option>
+                                    <option value="medio-completo">Ensino Médio Completo</option>
+                                    <option value="superior-incompleto">Ensino Superior Incompleto</option>
+                                    <option value="superior-completo">Ensino Superior Completo</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label>
+                                    <input type="checkbox" id="deficiencia" name="deficiencia">
+                                    Pessoa com Deficiência
+                                </label>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="mensagem">Como conheceu nosso trabalho? (Opcional)</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos como ficou sabendo dos nossos cursos..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <!-- Termos -->
+                        <div class="form-terms">
+                            <label>
+                                <input type="checkbox" id="termos" name="termos" required>
+                                Li e aceito os termos de inscrição e autorizo o uso dos meus dados conforme a LGPD *
+                            </label>
+                        </div>
+
+                        <!-- Botão de Envio -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Enviar Inscrição
+                            </button>
+                        </div>
+
+                        <p class="form-note">* Campos obrigatórios</p>
+                    </form>
+
+                    <!-- Mensagem de sucesso (oculta por padrão) -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Inscrição Enviada com Sucesso!</h3>
+                        <p>Recebemos sua inscrição e entraremos em contato em breve.</p>
+                        <button onclick="location.reload()" class="btn btn-secondary">Nova Inscrição</button>
+                    </div>
+                </div>
+
+                <!-- Informações de Contato -->
+                <aside class="contact-info">
+                    <div class="info-card">
+                        <h3>📍 Localização</h3>
+                        <p>Rua da República, 801</p>
+                        <p>Cidade Baixa</p>
+                        <p>Porto Alegre/RS</p>
+                        <p>CEP: 90050-321</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📞 Telefone</h3>
+                        <p>(51) 3433-6900</p>
+                        <p>(51) 3433-6902</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>✉️ E-mail</h3>
+                        <p><a href="mailto:relacaoinstitucional@paodospobres.com.br">relacaoinstitucional@paodospobres.com.br</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🕐 Horário de Atendimento</h3>
+                        <p>Segunda à Sexta</p>
+                        <p>8h às 12h</p>
+                        <p>13h às 17h20</p>
+                    </div>
+
+                    <div class="info-card highlight">
+                        <h3>💡 Dica</h3>
+                        <p>Antes de se inscrever, confira nossos <a href="faq.html">FAQs</a> para esclarecer suas dúvidas!</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Fundação O Pão dos Pobres</h3>
+                    <p>Transformando vidas através da educação e do trabalho desde 1895.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#cursos">Cursos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Rua da República, 801 - Cidade Baixa</li>
+                        <li>📞 (51) 3433-6900 / 3433-6902</li>
+                        <li>✉️ relacaoinstitucional@paodospobres.com.br</li>
+                        <li>🕐 Seg-Sex: 8h às 12h e 13h às 17h20</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fundação O Pão dos Pobres - Todos os direitos reservados.</p>
+                <p class="footer-dev">Desenvolvido por Wilgner Guimarães - TCC 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="contato.js"></script>
+</body>
+</html>
